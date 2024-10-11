@@ -1,0 +1,16 @@
+<nav>
+    <div class="nav__content">
+        <div class="logo"><a (click)="jumpTo('about')">Venkatesh Bhonagiri</a></div>
+        <label for="check" class="checkbox">
+            <i class="ri-menu-line" (click)="toggleMenu()"></i>
+        </label>
+        <input type="checkbox" *ngIf="isMenuOpen" name="check" id="check" />
+        <ul >
+            <li><a (click)="jumpTo('about')" class="header__link">About</a></li>
+            <li><a (click)="jumpTo('skills')" class="header__link">Skills</a></li>
+            <li><a (click)="jumpTo('experience')" class="header__link">Experience</a></li>
+            <li><a (click)="jumpTo('education')" class="header__link">Education</a></li>
+            <li><a (click)="jumpTo('awards')" class="header__link">Awards</a></li>
+        </ul>
+    </div>
+</nav>
