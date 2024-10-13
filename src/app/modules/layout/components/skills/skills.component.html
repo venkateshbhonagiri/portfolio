@@ -1,22 +1,16 @@
 <section class="skills" id="skills">
     <h2 class="text-center heading heading__secondary">Technologies I work on</h2>
-    <div class="margin-top-medium skills__container">
-      <div
-        *ngFor="let el of skills"
-        class="skill d-flex flex-column align-items-center"
-      >
-        <div class="skill__img-box">
-          <img
-            [src]="el.imagePath"
-            [alt]="el.alt"
-            class="skill__icon"
-            loading="lazy"
-            width="100%"
-            height="100%"
-          />
+      <div class="skills__container grid">
+        <div class="skills__container" *ngFor="let skill of skillIcons">
+          <div class="skill__item" key="{index}" title="{{ skill.title }}">
+            <img
+              src="{{ skill.iconUrl }}"
+              alt="{{ skill.title }}"
+              class="skillImg"
+            />
+            <span class="skill__name">{{ skill.title }}</span>
+          </div>
         </div>
-        <p class="skill__name margin-top-xsmall">{{ el.name }}</p>
       </div>
-    </div>
   </section>
   
